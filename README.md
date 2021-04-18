@@ -4,7 +4,7 @@
 
 ## Background:
 
-Recently I set on a fun challenge of learning enough German so I could read Kafka in its original text; but, what fun is language learning if the learner does not consume native media?
+Recently I set on a fun challenge of learning enough German so I could read Kafka in its original text; but what fun is language learning without consuming media?
 
 I enjoy watching a German livesteamer on Twitch -- even if I can't understand anything he is saying. This project is an autonomously updating database that collects all Twitch chat messages from https://www.twitch.tv/kev1ntv, and then the database is parsed and a word frequency list is created.
 
@@ -50,7 +50,7 @@ I still want to add a lot to this project! Eventually, I plan on containerizing 
 
 ![20210412_005905](https://user-images.githubusercontent.com/53328559/115156145-c3968880-a037-11eb-9785-e411125f4b1e.jpg)
 
-So, I clearly was a bit confused as I worked through this project! There is still a lot of things I want to do with it, as listed above. My plan is to add these changes by the end of the summer semester: 
+So, I clearly was a bit confused as I worked through this project! There is still a lot of things I want to do with it, as listed below. My plan is to add these changes by the end of the summer semester: 
 
 ![image](https://user-images.githubusercontent.com/53328559/115156233-15d7a980-a038-11eb-9219-bc3034d850d8.png)
 
