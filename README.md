@@ -13,13 +13,12 @@ By analyzing thousands of messages, I can learn what German vocabulary words I s
 ## Visualizations:
 **TOP 30 MOST USED WORDS:**
 
-![newplot (2)](https://user-images.githubusercontent.com/53328559/115154688-02751000-a031-11eb-9aeb-e9a50ffe8ec4.png)
+![image](https://user-images.githubusercontent.com/53328559/115166997-ac24c300-a06a-11eb-9c4c-b4624b36a1f8.png)
 
 **TOP 30 ACTIVE TWITCH VIEWERS:**
+![image](https://user-images.githubusercontent.com/53328559/115167040-c199ed00-a06a-11eb-9d88-01a3816a0f49.png)
 
-![image](https://user-images.githubusercontent.com/53328559/115154796-8f1fce00-a031-11eb-8aa0-46929fc72de0.png)
-
-As of 10:48AM 4/18/2021, these graphs were created from 1591 rows of data collected over the previous three days.
+As of 5:23PM 4/18/2021, these graphs were created from 4525 rows of data collected over the previous two days.
 
 ## Project Overview:
 
