@@ -13,22 +13,24 @@ By analyzing thousands of messages, I can learn what German vocabulary words I s
 ## Visualizations:
 **TOP 30 MOST USED WORDS:**
 
-![image](https://user-images.githubusercontent.com/53328559/115487817-4f620d80-a20e-11eb-853f-1ebf4a532eb8.png)
+![image](https://user-images.githubusercontent.com/53328559/116025337-173f3e00-a605-11eb-8311-69dccbddac88.png)
 
 **TOP 30 ACTIVE TWITCH VIEWERS:**
-![image](https://user-images.githubusercontent.com/53328559/115487836-59840c00-a20e-11eb-9674-42ba2c38d116.png)
+![image](https://user-images.githubusercontent.com/53328559/116025355-20c8a600-a605-11eb-8260-1f03db4a35af.png)
 
-As of 7:27PM 4/20/2021, these graphs were created from 7014 rows of data collected over the previous four days.
+As of 8:32 PM, 4/25/2021, these graphs were created from 17,055 messages collected over the span of 10 days.
 
 ## Project Overview:
 
 This project utilizes the Twitch API to create a function and check if the Twitch channel https://www.twitch.tv/kev1ntv is online. If it isn't online, then the script abandons the proccess and exits.
 
-![image](https://user-images.githubusercontent.com/53328559/115155323-4584b280-a034-11eb-8ec1-a3bb41d9713c.png)
+![image](https://user-images.githubusercontent.com/53328559/116025607-c845d880-a605-11eb-8bdc-960413fbe00f.png)
 
-If the channel is online, then the script connects to the Twitch IRC channel utilizing Socket, creating a function to read each message and user in live time.
 
-![image](https://user-images.githubusercontent.com/53328559/115155480-f723e380-a034-11eb-8c43-820f971235a2.png)
+If the channel is online, then the script connects to the Twitch IRC channel utilizing socket, creating a function to read each message and user in live time.
+
+![image](https://user-images.githubusercontent.com/53328559/116025641-dbf13f00-a605-11eb-87e7-96170aa5bdf1.png)
+
 
 All messages are sent to a PostgreSQL RDS hosted on AWS:
 
@@ -36,23 +38,18 @@ All messages are sent to a PostgreSQL RDS hosted on AWS:
 
 The Python script is then hosted on an AWS Lambda function, scheduled to execute the script every 5 minutes; so, data is collected from Kev1ntv's livestream autonomously if he is online.
 
-Each time the Lambda function is executed, it stores data into the PostgreSQL DB and into a DynamoDB for backup.
-
-![image](https://user-images.githubusercontent.com/53328559/115155960-01df7800-a037-11eb-9c89-1e7b9290240d.png)
+![image](https://user-images.githubusercontent.com/53328559/116025743-0e02a100-a606-11eb-87ce-7714c0e7cc7d.png)
 
 ## Future of This Project:
 
-I still want to add a lot to this project! Eventually, I plan on containerizing the scripts, and placing those containers into an AWS EC2 instance. I will then use Apache Airflow to schedule those scripts to run instead of using a Lambda function. Here are some pictures of my "office" setup while I worked through this project:
+If you look at the diagrams I created while I was learning how to complete this project, you can notice that I wanted to initially create something of a larger scale. But, as I worked through this project, I realized that it would be overkill to schedule my scripts with Airflow or use Kubernetes. Learning these tools would be useful, but it would be more beneficial to learn how to use these tools in a proper context.
+
+While I definitely want to continue progressing and learning as I work torwards becoming a data engineer, I want to spend much of my upcoming time learning about data structures and algorithms, proper development practices, etc. I recently registed for the Databricks Data + AI Summit, and I registered for the Lakehouse with Delta Lake Deep Dive class. So, I want to also spend most of my time preparing and learning the fundamental concepts behind data engineering, so I can benefit as much as possible for the event. I am looking forward to getting a copy of "Designing Data Intensive Applications".
 
 
 ![20210415_220631](https://user-images.githubusercontent.com/53328559/115156116-a661ba00-a037-11eb-90c7-608ffdf8d755.jpg)
 
 ![20210412_005905](https://user-images.githubusercontent.com/53328559/115156145-c3968880-a037-11eb-9785-e411125f4b1e.jpg)
 
-So, I clearly was a bit confused as I worked through this project! There is still a lot of things I want to do with it, as listed below. My plan is to add these changes by the end of the summer semester: 
+I had such a fun time making the first version of this project, and even though I spent hours frustratedly googling things, the satisfaction of making something made everything so worth it. I loved learning about basic networking with sockets, IRC, interacting with APIs, AWS, and PostgreSQL. I am excited to grow and improve in the future!
 
-![image](https://user-images.githubusercontent.com/53328559/115156233-15d7a980-a038-11eb-9219-bc3034d850d8.png)
-
-I had such a fun time making the first version of this project, and even though I spent hours frustratedly googling things, the satisfaction of making something made everything so worth it. I loved learning about basic networking with sockets, IRC, interacting with APIs, AWS, and PostgreSQL. 
-
-This project will update frequently! I'm excited to improve it!
